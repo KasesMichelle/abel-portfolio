@@ -300,7 +300,7 @@ export default function AbelLochiPortfolio() {
 
       <footer className="mt-20 py-8 bg-sky-50 border-t">
         <div className="max-w-6xl mx-auto px-6 text-sm text-slate-600">
-          © {new Date().getFullYear()} Lochi Abel — Built with a light blue theme. Designed for printing and presentation.
+          © {new Date().getFullYear()} Lochi Abel 
         </div>
       </footer>
     </div>
