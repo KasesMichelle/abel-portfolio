@@ -23,7 +23,12 @@ export default function AbelLochiPortfolio() {
       <header className="bg-sky-500/90 backdrop-blur-sm sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center text-white font-bold">LA</div>
+            {/* Profile picture in header */}
+            <img 
+              src="/profile.jpg" 
+              alt="Abel Lochi" 
+              className="w-12 h-12 rounded-full border-2 border-white shadow-md"
+            />
             <div>
               <h1 className="text-white font-semibold">LOCHI ABEL EKALI</h1>
               <p className="text-sm text-sky-100/90">Lawyer & Certified Professional Mediator</p>
@@ -46,8 +51,18 @@ export default function AbelLochiPortfolio() {
         {route === 'home' && (
           <section className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-2 bg-white/70 rounded-2xl p-8 shadow-lg">
+              {/* Larger profile picture in Home section */}
+              <img 
+                src="/profile.jpg" 
+                alt="Abel Lochi" 
+                className="w-32 h-32 rounded-full border-4 border-sky-500 shadow-lg mb-4"
+              />
               <h2 className="text-3xl font-bold text-sky-900 mb-2">Hello — I’m Lochi Abel</h2>
-              <p className="text-slate-700 leading-relaxed">A dedicated lawyer and Certified Professional Mediator with strong skills in legal research, drafting, and client counselling. This portfolio highlights experience, education, projects, and contact details. Scroll or use the nav to explore.</p>
+              <p className="text-slate-700 leading-relaxed">
+                A dedicated lawyer and Certified Professional Mediator with strong skills in legal research, drafting, 
+                and client counselling. This portfolio highlights experience, education, projects, and contact details. 
+                Scroll or use the nav to explore.
+              </p>
 
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-lg bg-sky-50 border border-sky-100">
@@ -56,7 +71,9 @@ export default function AbelLochiPortfolio() {
                 </div>
                 <div className="p-4 rounded-lg bg-sky-50 border border-sky-100">
                   <h3 className="text-sm font-semibold text-sky-800">Certifications</h3>
-                  <p className="text-sm text-slate-700 mt-1">Certified Professional Mediator; Data Protection; IP & Privacy courses</p>
+                  <p className="text-sm text-slate-700 mt-1">
+                    Certified Professional Mediator; Data Protection; IP & Privacy courses
+                  </p>
                 </div>
               </div>
             </div>
@@ -64,12 +81,19 @@ export default function AbelLochiPortfolio() {
             <aside className="bg-white/90 rounded-2xl p-6 shadow-md">
               <h3 className="text-sky-800 font-semibold">Contact</h3>
               <ul className="mt-3 text-slate-700 text-sm space-y-2">
-                <li className="break-words">Email: <a className="text-sky-600 underline" href="#">lochiabel24@gmail.com</a></li>
-                <li>Location: Nairobi , Kenya</li>
+                <li className="break-words">
+                  Email: <a className="text-sky-600 underline" href="#">lochiabel24@gmail.com</a>
+                </li>
+                <li>Location: Nairobi, Kenya</li>
               </ul>
 
               <div className="mt-6">
-                <button onClick={() => setRoute('contact')} className="w-full rounded-md py-2 bg-sky-500 text-white font-medium">Get in touch</button>
+                <button 
+                  onClick={() => setRoute('contact')} 
+                  className="w-full rounded-md py-2 bg-sky-500 text-white font-medium"
+                >
+                  Get in touch
+                </button>
               </div>
             </aside>
           </section>
@@ -78,7 +102,10 @@ export default function AbelLochiPortfolio() {
         {route === 'about' && (
           <section className="bg-white/90 rounded-2xl p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-sky-900">About Me</h2>
-            <p className="mt-4 text-slate-700 leading-relaxed">A concise professional introduction, values, and what motivates the work (integrity, professionalism, commitment). Include a short summary of legal strengths such as drafting, analysis, and mediation capabilities.</p>
+            <p className="mt-4 text-slate-700 leading-relaxed">
+              A concise professional introduction, values, and what motivates the work (integrity, professionalism, 
+              commitment). Include a short summary of legal strengths such as drafting, analysis, and mediation capabilities.
+            </p>
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -137,7 +164,9 @@ export default function AbelLochiPortfolio() {
             <div className="mt-4 space-y-4">
               <div className="p-4 rounded-lg border border-sky-100">
                 <h4 className="font-semibold">Bachelor of Laws (LL.B) — Moi University</h4>
-                <p className="text-sm text-slate-700">Sept 2019 - Apr 2023 — Second Class Honors (Upper Division)</p>
+                <p className="text-sm text-slate-700">
+                  Sept 2019 - Apr 2023 — Second Class Honors (Upper Division)
+                </p>
               </div>
 
               <div className="p-4 rounded-lg border border-sky-100">
@@ -191,13 +220,40 @@ export default function AbelLochiPortfolio() {
         {route === 'contact' && (
           <section className="bg-white/90 rounded-2xl p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-sky-900">Contact</h2>
-            <p className="mt-3 text-slate-700">I'd love to hear from you — for client work, collaboration or speaking opportunities.</p>
+            <p className="mt-3 text-slate-700">
+              I'd love to hear from you — for client work, collaboration or speaking opportunities.
+            </p>
 
-            <form className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={(e) => { e.preventDefault(); alert('Thanks! This form demo does not send messages yet.'); }}>
-              <input placeholder="Your name" required className="col-span-2 p-3 rounded-md border border-sky-100" />
-              <input placeholder="Your email" type="email" required className="col-span-2 p-3 rounded-md border border-sky-100" />
-              <textarea placeholder="Message" rows={5} className="col-span-2 p-3 rounded-md border border-sky-100" required />
-              <button type="submit" className="col-span-2 py-2 rounded-md bg-sky-500 text-white font-medium">Send message</button>
+            <form 
+              className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4" 
+              onSubmit={(e) => { 
+                e.preventDefault(); 
+                alert('Thanks! This form demo does not send messages yet.'); 
+              }}
+            >
+              <input 
+                placeholder="Your name" 
+                required 
+                className="col-span-2 p-3 rounded-md border border-sky-100" 
+              />
+              <input 
+                placeholder="Your email" 
+                type="email" 
+                required 
+                className="col-span-2 p-3 rounded-md border border-sky-100" 
+              />
+              <textarea 
+                placeholder="Message" 
+                rows={5} 
+                className="col-span-2 p-3 rounded-md border border-sky-100" 
+                required 
+              />
+              <button 
+                type="submit" 
+                className="col-span-2 py-2 rounded-md bg-sky-500 text-white font-medium"
+              >
+                Send message
+              </button>
             </form>
 
             <div className="mt-6 text-sm text-slate-700">
@@ -209,17 +265,33 @@ export default function AbelLochiPortfolio() {
         {route === 'resume' && (
           <section className="bg-white/90 rounded-2xl p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-sky-900">Resume</h2>
-            <p className="mt-3 text-slate-700">This page contains a printable, structured resume view and links to download the full PDF.</p>
+            <p className="mt-3 text-slate-700">
+              This page contains a printable, structured resume view and links to download the full PDF.
+            </p>
             <div className="mt-6 space-y-4">
-              {/* Compact resume layout - expand as needed */}
               <div className="p-4 border rounded-lg">
                 <h3 className="font-semibold">Professional Summary</h3>
-                <p className="text-sm text-slate-700 mt-2">A motivated lawyer with experience in pupillage, internships, and freelance legal writing. Skilled in research, drafting and mediation.</p>
+                <p className="text-sm text-slate-700 mt-2">
+                  A motivated lawyer with experience in pupillage, internships, and freelance legal writing. 
+                  Skilled in research, drafting and mediation.
+                </p>
               </div>
 
               <div className="flex gap-3">
-                <a className="inline-block px-4 py-2 rounded-md bg-sky-500 text-white" href="#" onClick={(e)=>{e.preventDefault(); alert('Pretend to download - in real use replace with actual file URL.')}}>Download PDF</a>
-                <a className="inline-block px-4 py-2 rounded-md border border-sky-300" href="#" onClick={(e)=>{e.preventDefault(); setRoute('contact');}}>Request updates</a>
+                <a 
+                  className="inline-block px-4 py-2 rounded-md bg-sky-500 text-white" 
+                  href="#" 
+                  onClick={(e)=>{e.preventDefault(); alert('Pretend to download - replace with actual PDF link');}}
+                >
+                  Download PDF
+                </a>
+                <a 
+                  className="inline-block px-4 py-2 rounded-md border border-sky-300" 
+                  href="#" 
+                  onClick={(e)=>{e.preventDefault(); setRoute('contact');}}
+                >
+                  Request updates
+                </a>
               </div>
             </div>
           </section>
@@ -227,7 +299,9 @@ export default function AbelLochiPortfolio() {
       </main>
 
       <footer className="mt-20 py-8 bg-sky-50 border-t">
-        <div className="max-w-6xl mx-auto px-6 text-sm text-slate-600">© {new Date().getFullYear()} Lochi Abel — Built with a light blue theme. Designed for printing and presentation.</div>
+        <div className="max-w-6xl mx-auto px-6 text-sm text-slate-600">
+          © {new Date().getFullYear()} Lochi Abel — Built with a light blue theme. Designed for printing and presentation.
+        </div>
       </footer>
     </div>
   );
