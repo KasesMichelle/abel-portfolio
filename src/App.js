@@ -64,9 +64,8 @@ export default function AbelLochiPortfolio() {
             <aside className="bg-white/90 rounded-2xl p-6 shadow-md">
               <h3 className="text-sky-800 font-semibold">Contact</h3>
               <ul className="mt-3 text-slate-700 text-sm space-y-2">
-                <li className="break-words">Email: <a className="text-sky-600 underline" href="#">Abel.Lochi@ikm.dlapiperafrica.com</a></li>
-                <li>Phone: <a className="text-sky-600">+254722274754</a></li>
-                <li>Location: Turkana County, Kenya</li>
+                <li className="break-words">Email: <a className="text-sky-600 underline" href="#">lochiabel24@gmail.com</a></li>
+                <li>Location: Nairobi , Kenya</li>
               </ul>
 
               <div className="mt-6">
@@ -143,7 +142,7 @@ export default function AbelLochiPortfolio() {
 
               <div className="p-4 rounded-lg border border-sky-100">
                 <h4 className="font-semibold">Postgraduate Diploma (ATP) — Kenya School of Law</h4>
-                <p className="text-sm text-slate-700">Feb 2024 - Present</p>
+                <p className="text-sm text-slate-700">Feb 2024 - November 2024</p>
               </div>
 
               <div className="p-4 rounded-lg border border-sky-100">
